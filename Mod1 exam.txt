@@ -1,0 +1,36 @@
+class dog{
+    String legs = "4";
+
+    void attributes(){
+        print("Has tail");
+    }
+    void legCount(){
+        print(legs + " legs");
+    }
+    void makeNoise(){
+        print("bark");
+    }
+    
+}
+// The whole class can be classified as an encapsulation since the variables and methods are clustered in one class
+class cat extends dog{
+    @override
+    void makeNoise(){
+        print("meow");
+    }
+// This method classifies as a polymorphism since we make us of the override syntax
+
+
+}
+
+void main(){
+    cat x = cat();
+    x.attributes();
+    x.legCount();
+    //Since we call the functions within the class this is considered as an inheritance
+
+    x.makeNoise();
+    //This syntax calls the class that has the function of a polymorphism and abstraction
+    //In this case it would return the attributes and leg count thus concluding its abstraction
+    // This would also return the noise string with the value of "meow" having a polymorphism function
+}
